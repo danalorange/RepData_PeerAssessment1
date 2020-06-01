@@ -21,7 +21,7 @@ activity$date <- as.Date(activity$date)
 
 
 ```r
-dailysteps <- tapply(activity$steps, activity$date, sum)
+dailysteps <- tapply(activity$steps, activity$date, sum, na.rm=TRUE)
 ```
 
 *2. Make a histogram of the total number of steps taken each day*
@@ -40,7 +40,7 @@ print(dailymean)
 ```
 
 ```
-## [1] 10766.19
+## [1] 9354.23
 ```
 
 ```r
@@ -49,7 +49,7 @@ print(dailymedian)
 ```
 
 ```
-## [1] 10765
+## [1] 10395
 ```
 
 ## What is the average daily activity pattern?
@@ -106,7 +106,7 @@ filled <- filled[,-4]
 *4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?*
 
 ```r
-dailysteps2 <- tapply(filled$steps, filled$date, sum)
+dailysteps2 <- tapply(filled$steps, filled$date, sum, na.rm=TRUE)
 hist(dailysteps2)
 ```
 
