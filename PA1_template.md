@@ -129,7 +129,7 @@ print(dailymedian2)
 ```
 ## [1] 10766.19
 ```
-**When using the mean for the 5-minute interval as the fill-in value, the mean of the filled-in dataframe is unchanged. The median is slightly increased and now matches the mean**
+**When using the mean for the 5-minute interval as the fill-in value, the mean and median are higher and match each other**
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
